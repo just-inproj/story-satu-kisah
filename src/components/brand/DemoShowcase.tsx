@@ -1,18 +1,22 @@
 "use client";
+
 import { useState } from "react";
 import { landing } from "@/lib/content/landing";
+import { Reveal } from "@/components/motion/Reveal";
+
+type DemoPanelId = (typeof landing.demo.panels)[number]["id"];
 
 export function DemoShowcase() {
-  const [active, setActive] = useState(landing.demo.panels[0].id);
+  const [active, setActive] = useState<DemoPanelId>(landing.demo.panels[0].id);
   const panel = landing.demo.panels.find((p) => p.id === active) ?? landing.demo.panels[0];
   return (
-    <section className="section section-muted" id="demo">
+    <section className="section section-muted story-chapter" id="demo">
       <div className="container">
-        <p className="eyebrow">Demo Pengalaman</p>
-        <h2 className="h2">{landing.demo.title}</h2>
-        <p className="lead">{landing.demo.subtitle}</p>
+        <Reveal y={24}><p className="eyebrow">Demo Pengalaman</p></Reveal>
+        <Reveal y={34} delay={0.05}><h2 className="h2">{landing.demo.title}</h2></Reveal>
+        <Reveal y={24} delay={0.1}><p className="lead">{landing.demo.subtitle}</p></Reveal>
         <div className="demo-grid">
-          <div>
+          <Reveal y={40} delay={0.12}>
             <div className="demo-tabs" role="tablist" aria-label="Pilih tampilan demo">
               {landing.demo.panels.map((p) => (
                 <button key={p.id} role="tab" aria-selected={active === p.id} aria-controls={`panel-${p.id}`} id={`tab-${p.id}`} className={`demo-tab ${active === p.id ? "active" : ""}`} onClick={() => setActive(p.id)}>
@@ -20,15 +24,17 @@ export function DemoShowcase() {
                 </button>
               ))}
             </div>
-            <div className="card demo-panel" role="tabpanel" id={`panel-${panel.id}`} aria-labelledby={`tab-${panel.id}`}>
-              <p className="eyebrow">{panel.label}</p>
-              <h3 className="h3 demo-panel-title">{panel.heading}</h3>
-              <p className="muted">{panel.text}</p>
-              <a className="btn btn-secondary" href="/demo/invitation" style={{ marginTop: "1.25rem" }}>Buka demo penuh</a>
+            <div className="card demo-panel magic-frame" role="tabpanel" id={`panel-${panel.id}`} aria-labelledby={`tab-${panel.id}`}>
+              <div key={panel.id} className="demo-panel-content">
+                <p className="eyebrow">{panel.label}</p>
+                <h3 className="h3 demo-panel-title">{panel.heading}</h3>
+                <p className="muted">{panel.text}</p>
+                <a className="btn btn-secondary" href="/demo/invitation" style={{ marginTop: "1.25rem" }}>Buka demo penuh</a>
+              </div>
             </div>
-          </div>
-          <div className="card demo-screen" aria-hidden="true">
-            <div className="demo-ui">
+          </Reveal>
+          <Reveal y={50} x={24} delay={0.18} className="card demo-screen magic-frame" aria-hidden="true">
+            <div key={active} className="demo-ui demo-ui-animate">
               {active === "cover" && (
                 <>
                   <p className="script">The Wedding of</p>
@@ -62,7 +68,7 @@ export function DemoShowcase() {
                 </>
               )}
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

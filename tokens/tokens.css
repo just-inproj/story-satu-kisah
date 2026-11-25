@@ -1,19 +1,19 @@
 :root {
-  /* Primitive */
+  /* Primitive - Sage & Ivory */
   --p-neutral-0: #ffffff;
-  --p-neutral-25: #fff9fb;
-  --p-neutral-50: #f7f1f3;
-  --p-neutral-100: #efe6ea;
-  --p-neutral-200: #e8d6de;
-  --p-neutral-400: #9a7d89;
-  --p-neutral-600: #6b4a57;
-  --p-neutral-800: #3b1d2b;
-  --p-neutral-950: #201018;
-  --p-rose-100: #fce7ef;
-  --p-rose-300: #e7a9bf;
-  --p-rose-500: #b85c7c;
-  --p-rose-600: #a14c6a;
-  --p-rose-700: #843c58;
+  --p-neutral-25: #fbfcfa;
+  --p-neutral-50: #f3f6f2;
+  --p-neutral-100: #eaf0ec;
+  --p-neutral-200: #dde5df;
+  --p-neutral-400: #95a69b;
+  --p-neutral-600: #5f7067;
+  --p-neutral-800: #2c3631;
+  --p-neutral-950: #18201b;
+  --p-sage-100: #eaf0ec;
+  --p-sage-300: #b8cabc;
+  --p-sage-500: #6f8f7b;
+  --p-sage-600: #5f7e6b;
+  --p-sage-700: #4f6959;
   --p-gold-500: #a16207;
   --p-green-600: #16a34a;
   --p-red-600: #dc2626;
@@ -25,17 +25,17 @@
   --color-muted-fg: var(--p-neutral-600);
   --color-card: var(--p-neutral-0);
   --color-border: var(--p-neutral-200);
-  --color-primary: var(--p-rose-500);
-  --color-primary-hover: var(--p-rose-600);
+  --color-primary: var(--p-sage-500);
+  --color-primary-hover: var(--p-sage-600);
   --color-primary-fg: var(--p-neutral-0);
   --color-accent: var(--p-gold-500);
   --color-accent-fg: var(--p-neutral-0);
-  --color-ring: var(--p-rose-300);
+  --color-ring: var(--p-sage-300);
   --color-success: var(--p-green-600);
   --color-destructive: var(--p-red-600);
 
   /* Typography */
-  --font-display: "Playfair Display", Georgia, serif;
+  --font-display: "Inter", system-ui, -apple-system, sans-serif;
   --font-body: "Inter", system-ui, -apple-system, sans-serif;
   --font-script: "Great Vibes", cursive;
 
@@ -47,29 +47,30 @@
   --radius-md: 0.75rem;
   --radius-lg: 1.25rem;
   --radius-pill: 999px;
-  --shadow-sm: 0 1px 2px rgba(59,29,43,0.04), 0 4px 12px rgba(59,29,43,0.04);
-  --shadow-md: 0 8px 24px rgba(59,29,43,0.08);
+  --shadow-sm: 0 1px 2px rgba(44,54,49,0.04), 0 4px 12px rgba(44,54,49,0.04);
+  --shadow-md: 0 8px 24px rgba(44,54,49,0.08);
 
   /* Motion */
   --dur-fast: 150ms;
   --dur-base: 220ms;
   --dur-slow: 320ms;
   --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-fairytale: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .dark {
-  --color-bg: #201018;
-  --color-fg: #f7f1f3;
-  --color-muted: #2a1821;
-  --color-muted-fg: #e8d6de;
-  --color-card: #2f1b24;
-  --color-border: #4a2f3b;
-  --color-primary: #e7a9bf;
-  --color-primary-hover: #fce7ef;
-  --color-primary-fg: #201018;
+  --color-bg: #18201b;
+  --color-fg: #f3f6f2;
+  --color-muted: #222d27;
+  --color-muted-fg: #dde5df;
+  --color-card: #243029;
+  --color-border: #3a4a41;
+  --color-primary: #b8cabc;
+  --color-primary-hover: #eaf0ec;
+  --color-primary-fg: #18201b;
   --color-accent: #d4a017;
-  --color-accent-fg: #201018;
-  --color-ring: #e7a9bf;
+  --color-accent-fg: #18201b;
+  --color-ring: #b8cabc;
   --color-success: #4ade80;
   --color-destructive: #f87171;
 }

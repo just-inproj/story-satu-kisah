@@ -1,18 +1,21 @@
+"use client";
+
 import { landing } from "@/lib/content/landing";
+import { Reveal } from "@/components/motion/Reveal";
 
 export function PricingTeaser() {
   const { pricing } = landing;
   return (
-    <section className="section section-muted" id="paket">
+    <section className="section section-muted story-chapter" id="paket">
       <div className="container">
         <div className="center">
-          <p className="eyebrow">{pricing.eyebrow}</p>
-          <h2 className="h2">{pricing.title}</h2>
-          <p className="lead">{pricing.subtitle}</p>
+          <Reveal y={24}><p className="eyebrow">{pricing.eyebrow}</p></Reveal>
+          <Reveal y={34} delay={0.05}><h2 className="h2">{pricing.title}</h2></Reveal>
+          <Reveal y={24} delay={0.1}><p className="lead">{pricing.subtitle}</p></Reveal>
         </div>
-        <div className="grid-3 pricing-grid">
+        <Reveal y={60} stagger={0.14} className="grid-3 pricing-grid">
           {pricing.items.map((p) => (
-            <article key={p.name} className={`card price-card ${p.featured ? "featured" : ""}`}>
+            <article key={p.name} className={`card price-card magic-frame ${p.featured ? "featured" : ""}`}>
               {p.featured && <p className="price-badge">Paling populer</p>}
               <h3 className="h3">{p.name}</h3>
               <div className="price">{p.price}</div>
@@ -25,7 +28,7 @@ export function PricingTeaser() {
               </a>
             </article>
           ))}
-        </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -1,5 +1,8 @@
+"use client";
+
 import type { ReactNode } from "react";
 import { landing, type IconName } from "@/lib/content/landing";
+import { Reveal } from "@/components/motion/Reveal";
 
 const icons: Record<IconName, ReactNode> = {
   heart: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M20.8 4.6a5 5 0 0 0-7.1 0L12 6.3l-1.7-1.7a5 5 0 0 0-7.1 7.1l1.7 1.7L12 20.5l7.1-7.1 1.7-1.7a5 5 0 0 0 0-7.1Z"/></svg>,
@@ -16,20 +19,20 @@ const icons: Record<IconName, ReactNode> = {
 
 export function FeatureBento() {
   return (
-    <section className="section" id="fitur">
+    <section className="section story-chapter" id="fitur">
       <div className="container">
-        <p className="eyebrow">Fitur Unggulan</p>
-        <h2 className="h2">Semua yang tamu butuhkan,<br className="br-desktop" /> dalam satu kisah indah.</h2>
-        <p className="lead">Fitur dirancang untuk kenyamanan pasangan, kejelasan tamu, dan pengalaman yang terasa hangat.</p>
-        <div className="bento" role="list">
+        <Reveal y={24}><p className="eyebrow">Fitur Unggulan</p></Reveal>
+        <Reveal y={34} delay={0.05}><h2 className="h2">Semua yang tamu butuhkan,<br className="br-desktop" /> dalam satu kisah indah.</h2></Reveal>
+        <Reveal y={24} delay={0.1}><p className="lead">Fitur dirancang untuk kenyamanan pasangan, kejelasan tamu, dan pengalaman yang terasa hangat.</p></Reveal>
+        <Reveal y={50} stagger={0.1} className="bento" role="list">
           {landing.features.map((f) => (
-            <article key={f.title} className="card feature-card" role="listitem">
+            <article key={f.title} className="card feature-card magic-frame" role="listitem">
               <div className="feature-icon">{icons[f.icon]}</div>
               <h3 className="h3">{f.title}</h3>
               <p>{f.desc}</p>
             </article>
           ))}
-        </div>
+        </Reveal>
       </div>
     </section>
   );

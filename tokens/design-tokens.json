@@ -2,29 +2,29 @@
   "$schema": "https://design-tokens.org/schema.json",
   "meta": {
     "brand": "Story Satu Kisah",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "mode": "light-first",
-    "direction": "Romantic Editorial Premium"
+    "direction": "Sage Ivory Fairytale Editorial"
   },
   "primitive": {
     "color": {
       "neutral": {
         "0": { "$value": "#FFFFFF", "$type": "color" },
-        "25": { "$value": "#FFF9FB", "$type": "color" },
-        "50": { "$value": "#F7F1F3", "$type": "color" },
-        "100": { "$value": "#EFE6EA", "$type": "color" },
-        "200": { "$value": "#E8D6DE", "$type": "color" },
-        "400": { "$value": "#9A7D89", "$type": "color" },
-        "600": { "$value": "#6B4A57", "$type": "color" },
-        "800": { "$value": "#3B1D2B", "$type": "color" },
-        "950": { "$value": "#201018", "$type": "color" }
+        "25": { "$value": "#FBFCFA", "$type": "color" },
+        "50": { "$value": "#F3F6F2", "$type": "color" },
+        "100": { "$value": "#EAF0EC", "$type": "color" },
+        "200": { "$value": "#DDE5DF", "$type": "color" },
+        "400": { "$value": "#95A69B", "$type": "color" },
+        "600": { "$value": "#5F7067", "$type": "color" },
+        "800": { "$value": "#2C3631", "$type": "color" },
+        "950": { "$value": "#18201B", "$type": "color" }
       },
-      "rose": {
-        "100": { "$value": "#FCE7EF", "$type": "color" },
-        "300": { "$value": "#E7A9BF", "$type": "color" },
-        "500": { "$value": "#B85C7C", "$type": "color" },
-        "600": { "$value": "#A14C6A", "$type": "color" },
-        "700": { "$value": "#843C58", "$type": "color" }
+      "sage": {
+        "100": { "$value": "#EAF0EC", "$type": "color" },
+        "300": { "$value": "#B8CABC", "$type": "color" },
+        "500": { "$value": "#6F8F7B", "$type": "color" },
+        "600": { "$value": "#5F7E6B", "$type": "color" },
+        "700": { "$value": "#4F6959", "$type": "color" }
       },
       "gold": {
         "500": { "$value": "#A16207", "$type": "color" },
@@ -34,7 +34,7 @@
       "red": { "600": { "$value": "#DC2626", "$type": "color" } }
     },
     "fontFamily": {
-      "display": { "$value": "'Playfair Display', Georgia, serif", "$type": "fontFamily" },
+      "display": { "$value": "'Inter', system-ui, -apple-system, sans-serif", "$type": "fontFamily" },
       "body": { "$value": "'Inter', system-ui, -apple-system, sans-serif", "$type": "fontFamily" },
       "script": { "$value": "'Great Vibes', cursive", "$type": "fontFamily" }
     },
@@ -100,10 +100,10 @@
       "color": {
         "bg": { "$value": "{primitive.color.neutral.950}", "$type": "color" },
         "fg": { "$value": "{primitive.color.neutral.50}", "$type": "color" },
-        "muted": { "$value": "#2A1821", "$type": "color" },
+        "muted": { "$value": "#222D27", "$type": "color" },
         "muted-fg": { "$value": "{primitive.color.neutral.200}", "$type": "color" },
-        "card": { "$value": "#2F1B24", "$type": "color" },
-        "border": { "$value": "#4A2F3B", "$type": "color" },
+        "card": { "$value": "#243029", "$type": "color" },
+        "border": { "$value": "#3A4A41", "$type": "color" },
         "primary": { "$value": "{primitive.color.rose.300}", "$type": "color" },
         "primary-hover": { "$value": "{primitive.color.rose.100}", "$type": "color" },
         "primary-fg": { "$value": "{primitive.color.neutral.950}", "$type": "color" },

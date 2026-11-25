@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { InviteCover } from "@/components/invitation/InviteCover";
 import { EventSection } from "@/components/invitation/EventCard";
 import { Gallery } from "@/components/invitation/Gallery";
@@ -13,7 +14,7 @@ export default function DemoInvitation() {
   return (
     <main id="main">
       <div style={{ padding: "1rem", textAlign: "center", fontSize: ".875rem", background: "var(--color-muted)", color: "var(--color-muted-fg)" }}>
-        <a href="/" style={{ textDecoration: "underline" }}>← Kembali ke landing Story Satu Kisah</a>
+        <Link href="/" style={{ textDecoration: "underline" }}>← Kembali ke landing Story Satu Kisah</Link>
       </div>
       <InviteCover guestName="Tamu Undangan" />
       <Section id="couple" narrow>

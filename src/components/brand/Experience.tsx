@@ -1,5 +1,8 @@
+"use client";
+
 import type { ReactNode } from "react";
 import { landing, type IconName } from "@/lib/content/landing";
+import { Reveal } from "@/components/motion/Reveal";
 
 const icons: Record<IconName, ReactNode> = {
   heart: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M20.8 4.6a5 5 0 0 0-7.1 0L12 6.3l-1.7-1.7a5 5 0 0 0-7.1 7.1l1.7 1.7L12 20.5l7.1-7.1 1.7-1.7a5 5 0 0 0 0-7.1Z"/></svg>,
@@ -17,13 +20,13 @@ const icons: Record<IconName, ReactNode> = {
 export function Experience() {
   const { experience } = landing;
   return (
-    <section className="section">
+    <section className="section story-chapter">
       <div className="container experience-grid">
         <div>
-          <p className="eyebrow">{experience.eyebrow}</p>
-          <h2 className="h2">{experience.title}</h2>
-          <p className="lead">{experience.subtitle}</p>
-          <div className="experience-points">
+          <Reveal y={24}><p className="eyebrow">{experience.eyebrow}</p></Reveal>
+          <Reveal y={34} delay={0.05}><h2 className="h2">{experience.title}</h2></Reveal>
+          <Reveal y={24} delay={0.1}><p className="lead">{experience.subtitle}</p></Reveal>
+          <Reveal y={30} stagger={0.12} className="experience-points">
             {experience.points.map((p) => (
               <div key={p.title} className="experience-point">
                 <div className="feature-icon sm">{icons[p.icon]}</div>
@@ -33,9 +36,9 @@ export function Experience() {
                 </div>
               </div>
             ))}
-          </div>
+          </Reveal>
         </div>
-        <div className="experience-visual card" aria-hidden="true">
+        <Reveal y={50} x={30} delay={0.1} className="experience-visual card magic-frame" aria-hidden="true">
           <div className="experience-stat-grid">
             <div className="exp-stat"><strong>Mobile-first</strong><span>Nyaman di semua layar</span></div>
             <div className="exp-stat"><strong>Interaktif</strong><span>RSVP, maps, kalender</span></div>
@@ -43,10 +46,10 @@ export function Experience() {
             <div className="exp-stat"><strong>Cepat</strong><span>Ringan & mudah dibagikan</span></div>
           </div>
           <div className="exp-quote">
-            <p className="script">"Setiap kisah layak dirayakan dengan indah."</p>
+            <p className="script">&ldquo;Setiap kisah layak dirayakan dengan indah.&rdquo;</p>
             <span>— Story Satu Kisah</span>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

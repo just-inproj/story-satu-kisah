@@ -3,7 +3,7 @@ import { Inter, Playfair_Display, Great_Vibes } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-body", display: "swap" });
-const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-display", display: "swap" });
+const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-display-serif", display: "swap" });
 const greatVibes = Great_Vibes({ weight: "400", subsets: ["latin"], variable: "--font-script", display: "swap" });
 
 export const metadata: Metadata = {

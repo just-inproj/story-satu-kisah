@@ -1,26 +1,39 @@
+"use client";
+
+import dynamic from "next/dynamic";
 import { landing } from "@/lib/content/landing";
+import { Reveal } from "@/components/motion/Reveal";
+import { useReducedMotion } from "@/components/motion/useReducedMotion";
+
+const HeroScene = dynamic(() => import("@/components/three/HeroScene"), { ssr: false });
 
 export function Hero() {
   const { hero } = landing;
+  const reduce = useReducedMotion();
   return (
-    <section className="hero">
+    <section className="hero story-chapter" id="beranda">
       <div className="hero-bg" aria-hidden="true" />
+      <div className="fairytale-layer" aria-hidden="true">
+        <div className="story-orb story-orb-a" />
+        <div className="story-orb story-orb-b" />
+      </div>
       <div className="container hero-grid">
         <div className="hero-copy">
-          <p className="eyebrow reveal">{hero.eyebrow}</p>
-          <h1 className="display reveal delay-1">{hero.title}</h1>
-          <p className="lead reveal delay-2">{hero.subtitle}</p>
-          <div className="hero-actions reveal delay-3">
+          <Reveal y={24}><p className="eyebrow">{hero.eyebrow}</p></Reveal>
+          <Reveal y={30} delay={0.05}><h1 className="display">{hero.title}</h1></Reveal>
+          <Reveal y={30} delay={0.16}><p className="lead">{hero.subtitle}</p></Reveal>
+          <Reveal y={24} delay={0.24} className="hero-actions">
             <a className="btn btn-primary" href={hero.primaryCta.href} target="_blank" rel="noreferrer">{hero.primaryCta.label}</a>
             <a className="btn btn-secondary" href={hero.secondaryCta.href}>{hero.secondaryCta.label}</a>
-          </div>
-          <div className="hero-highlights reveal delay-3" aria-label="Sorotan">
+          </Reveal>
+          <Reveal y={20} delay={0.32} className="hero-highlights" aria-label="Sorotan">
             {hero.highlights.map((h) => <span key={h} className="highlight-chip">{h}</span>)}
-          </div>
+          </Reveal>
           <p className="hero-note">* {hero.note}</p>
         </div>
-        <div className="hero-visual reveal delay-2" aria-hidden="true">
-          <div className="mock-browser">
+        <div className="hero-visual" aria-hidden="true">
+          {!reduce && <HeroScene />}
+          <Reveal y={60} scale={0.96} delay={0.15} className="mock-browser magic-frame">
             <div className="mock-browser-bar"><i /><i /><i /><span>storysatukisah.com/alya-raka</span></div>
             <div className="mock-browser-body">
               <div className="mock-invite">
@@ -31,8 +44,8 @@ export function Hero() {
                 <span className="mock-pill" style={{ marginTop: "1rem", display: "inline-block" }}>Buka Undangan</span>
               </div>
             </div>
-          </div>
-          <div className="mock-phone">
+          </Reveal>
+          <Reveal y={80} x={-20} delay={0.3} className="mock-phone magic-frame">
             <div className="mock-phone-notch" />
             <div className="mock-phone-screen">
               <p className="script">Dear Guest</p>
@@ -46,7 +59,7 @@ export function Hero() {
               </div>
               <span className="mock-pill">Konfirmasi RSVP</span>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

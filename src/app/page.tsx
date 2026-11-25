@@ -11,10 +11,12 @@ import { PricingTeaser } from "@/components/brand/PricingTeaser";
 import { Faq } from "@/components/brand/Faq";
 import { FinalCta } from "@/components/brand/FinalCta";
 import { Footer } from "@/components/brand/Footer";
+import { FairytaleBackground } from "@/components/motion/FairytaleBackground";
 
 export default function Home() {
   return (
     <>
+      <FairytaleBackground />
       <Navbar />
       <main id="main">
         <Hero />
