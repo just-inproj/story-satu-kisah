@@ -1,0 +1,135 @@
+{
+  "$schema": "https://design-tokens.org/schema.json",
+  "meta": {
+    "brand": "Story Satu Kisah",
+    "version": "0.1.0",
+    "mode": "light-first",
+    "direction": "Romantic Editorial Premium"
+  },
+  "primitive": {
+    "color": {
+      "neutral": {
+        "0": { "$value": "#FFFFFF", "$type": "color" },
+        "25": { "$value": "#FFF9FB", "$type": "color" },
+        "50": { "$value": "#F7F1F3", "$type": "color" },
+        "100": { "$value": "#EFE6EA", "$type": "color" },
+        "200": { "$value": "#E8D6DE", "$type": "color" },
+        "400": { "$value": "#9A7D89", "$type": "color" },
+        "600": { "$value": "#6B4A57", "$type": "color" },
+        "800": { "$value": "#3B1D2B", "$type": "color" },
+        "950": { "$value": "#201018", "$type": "color" }
+      },
+      "rose": {
+        "100": { "$value": "#FCE7EF", "$type": "color" },
+        "300": { "$value": "#E7A9BF", "$type": "color" },
+        "500": { "$value": "#B85C7C", "$type": "color" },
+        "600": { "$value": "#A14C6A", "$type": "color" },
+        "700": { "$value": "#843C58", "$type": "color" }
+      },
+      "gold": {
+        "500": { "$value": "#A16207", "$type": "color" },
+        "600": { "$value": "#854D0E", "$type": "color" }
+      },
+      "green": { "600": { "$value": "#16A34A", "$type": "color" } },
+      "red": { "600": { "$value": "#DC2626", "$type": "color" } }
+    },
+    "fontFamily": {
+      "display": { "$value": "'Playfair Display', Georgia, serif", "$type": "fontFamily" },
+      "body": { "$value": "'Inter', system-ui, -apple-system, sans-serif", "$type": "fontFamily" },
+      "script": { "$value": "'Great Vibes', cursive", "$type": "fontFamily" }
+    },
+    "fontSize": {
+      "xs": { "$value": "0.75rem", "$type": "dimension" },
+      "sm": { "$value": "0.875rem", "$type": "dimension" },
+      "base": { "$value": "1rem", "$type": "dimension" },
+      "lg": { "$value": "1.125rem", "$type": "dimension" },
+      "xl": { "$value": "1.25rem", "$type": "dimension" },
+      "2xl": { "$value": "1.5rem", "$type": "dimension" },
+      "3xl": { "$value": "2rem", "$type": "dimension" },
+      "4xl": { "$value": "2.75rem", "$type": "dimension" },
+      "5xl": { "$value": "3.5rem", "$type": "dimension" }
+    },
+    "spacing": {
+      "1": { "$value": "0.25rem", "$type": "dimension" },
+      "2": { "$value": "0.5rem", "$type": "dimension" },
+      "3": { "$value": "0.75rem", "$type": "dimension" },
+      "4": { "$value": "1rem", "$type": "dimension" },
+      "6": { "$value": "1.5rem", "$type": "dimension" },
+      "8": { "$value": "2rem", "$type": "dimension" },
+      "12": { "$value": "3rem", "$type": "dimension" },
+      "16": { "$value": "4rem", "$type": "dimension" },
+      "24": { "$value": "6rem", "$type": "dimension" },
+      "32": { "$value": "8rem", "$type": "dimension" }
+    },
+    "radius": {
+      "sm": { "$value": "0.5rem", "$type": "dimension" },
+      "md": { "$value": "0.75rem", "$type": "dimension" },
+      "lg": { "$value": "1.25rem", "$type": "dimension" },
+      "pill": { "$value": "999px", "$type": "dimension" }
+    },
+    "shadow": {
+      "sm": { "$value": "0 1px 2px rgba(59,29,43,0.04), 0 4px 12px rgba(59,29,43,0.04)", "$type": "shadow" },
+      "md": { "$value": "0 8px 24px rgba(59,29,43,0.08)", "$type": "shadow" }
+    },
+    "duration": {
+      "fast": { "$value": "150ms", "$type": "duration" },
+      "base": { "$value": "220ms", "$type": "duration" },
+      "slow": { "$value": "320ms", "$type": "duration" }
+    }
+  },
+  "semantic": {
+    "light": {
+      "color": {
+        "bg": { "$value": "{primitive.color.neutral.25}", "$type": "color" },
+        "fg": { "$value": "{primitive.color.neutral.800}", "$type": "color" },
+        "muted": { "$value": "{primitive.color.neutral.50}", "$type": "color" },
+        "muted-fg": { "$value": "{primitive.color.neutral.600}", "$type": "color" },
+        "card": { "$value": "{primitive.color.neutral.0}", "$type": "color" },
+        "border": { "$value": "{primitive.color.neutral.200}", "$type": "color" },
+        "primary": { "$value": "{primitive.color.rose.500}", "$type": "color" },
+        "primary-hover": { "$value": "{primitive.color.rose.600}", "$type": "color" },
+        "primary-fg": { "$value": "{primitive.color.neutral.0}", "$type": "color" },
+        "accent": { "$value": "{primitive.color.gold.500}", "$type": "color" },
+        "accent-fg": { "$value": "{primitive.color.neutral.0}", "$type": "color" },
+        "ring": { "$value": "{primitive.color.rose.300}", "$type": "color" },
+        "success": { "$value": "{primitive.color.green.600}", "$type": "color" },
+        "destructive": { "$value": "{primitive.color.red.600}", "$type": "color" }
+      }
+    },
+    "dark": {
+      "color": {
+        "bg": { "$value": "{primitive.color.neutral.950}", "$type": "color" },
+        "fg": { "$value": "{primitive.color.neutral.50}", "$type": "color" },
+        "muted": { "$value": "#2A1821", "$type": "color" },
+        "muted-fg": { "$value": "{primitive.color.neutral.200}", "$type": "color" },
+        "card": { "$value": "#2F1B24", "$type": "color" },
+        "border": { "$value": "#4A2F3B", "$type": "color" },
+        "primary": { "$value": "{primitive.color.rose.300}", "$type": "color" },
+        "primary-hover": { "$value": "{primitive.color.rose.100}", "$type": "color" },
+        "primary-fg": { "$value": "{primitive.color.neutral.950}", "$type": "color" },
+        "accent": { "$value": "#D4A017", "$type": "color" },
+        "accent-fg": { "$value": "{primitive.color.neutral.950}", "$type": "color" },
+        "ring": { "$value": "{primitive.color.rose.300}", "$type": "color" },
+        "success": { "$value": "#4ADE80", "$type": "color" },
+        "destructive": { "$value": "#F87171", "$type": "color" }
+      }
+    }
+  },
+  "component": {
+    "button": {
+      "radius": { "$value": "{primitive.radius.pill}", "$type": "dimension" },
+      "px": { "$value": "{primitive.spacing.6}", "$type": "dimension" },
+      "py": { "$value": "{primitive.spacing.3}", "$type": "dimension" }
+    },
+    "card": {
+      "radius": { "$value": "{primitive.radius.lg}", "$type": "dimension" },
+      "padding": { "$value": "{primitive.spacing.8}", "$type": "dimension" },
+      "shadow": { "$value": "{primitive.shadow.sm}", "$type": "shadow" }
+    },
+    "section": {
+      "py": { "$value": "{primitive.spacing.24}", "$type": "dimension" },
+      "container": { "$value": "1200px", "$type": "dimension" },
+      "narrow": { "$value": "720px", "$type": "dimension" }
+    }
+  }
+}
