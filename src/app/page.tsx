@@ -2,6 +2,7 @@ import { Navbar } from "@/components/brand/Navbar";
 import { Hero } from "@/components/brand/Hero";
 import { ProofStrip } from "@/components/brand/ProofStrip";
 import { FeatureBento } from "@/components/brand/FeatureBento";
+import { Experience } from "@/components/brand/Experience";
 import { DemoShowcase } from "@/components/brand/DemoShowcase";
 import { ProcessSteps } from "@/components/brand/ProcessSteps";
 import { TemplatePreview } from "@/components/brand/TemplatePreview";
@@ -19,6 +20,7 @@ export default function Home() {
         <Hero />
         <ProofStrip />
         <FeatureBento />
+        <Experience />
         <DemoShowcase />
         <ProcessSteps />
         <TemplatePreview />

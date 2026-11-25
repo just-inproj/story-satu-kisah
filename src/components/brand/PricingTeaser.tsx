@@ -1,18 +1,19 @@
 import { landing } from "@/lib/content/landing";
 
 export function PricingTeaser() {
+  const { pricing } = landing;
   return (
     <section className="section section-muted" id="paket">
       <div className="container">
         <div className="center">
-          <p className="eyebrow">Paket</p>
-          <h2 className="h2">Pilihan yang jelas, sesuai kebutuhan</h2>
-          <p className="lead">Harga dummy untuk preview visual. Paket final akan disesuaikan.</p>
+          <p className="eyebrow">{pricing.eyebrow}</p>
+          <h2 className="h2">{pricing.title}</h2>
+          <p className="lead">{pricing.subtitle}</p>
         </div>
-        <div className="grid-3" style={{ marginTop: "2.5rem", alignItems: "stretch" }}>
-          {landing.pricing.map((p) => (
-            <article key={p.name} className={`card price-card reveal ${p.featured ? "featured" : ""}`}>
-              {p.featured && <p className="eyebrow" style={{ color: "#e7a9bf", marginBottom: ".5rem" }}>Paling populer</p>}
+        <div className="grid-3 pricing-grid">
+          {pricing.items.map((p) => (
+            <article key={p.name} className={`card price-card ${p.featured ? "featured" : ""}`}>
+              {p.featured && <p className="price-badge">Paling populer</p>}
               <h3 className="h3">{p.name}</h3>
               <div className="price">{p.price}</div>
               <p>{p.desc}</p>
